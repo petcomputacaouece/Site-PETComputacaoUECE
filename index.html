@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href= "src/petlogoFooter.png" type="image/x-icon">
+  <title>Sobre Nós</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inria+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="sobre.css" />
+</head>
+<body>
+  <header class="header">
+  <img src="./src/LogoPET.png" alt="Logo do PET" />
+
+  <!-- Menu Desktop -->
+  <nav class="navigation_header desktop-menu">
+    <a href="index.html">Sobre nós</a>
+    <a href="selecao.html">Seleção</a>
+    <a href="secomp.html">SECOMP</a>
+    <a href="atividades.html">Atividades</a>
+    <a href="membros.html">Membros</a>
+  </nav>
+
+  <!-- Botão Mobile -->
+  <button class="menu-toggle">☰</button>
+
+  <!-- Menu Mobile -->
+  <nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Sobre nós</a>
+    <a href="selecao.html">Seleção</a>
+    <a href="secomp.html">SECOMP</a>
+    <a href="atividades.html">Atividades</a>
+    <a href="membros.html">Membros</a>
+  </nav>
+
+  <!-- Botão de modo claro/escuro -->
+  <button id="modo-toggle" class="toggle-botao">
+    <div class="icone"></div>
+  </button>
+</header>
+
+  <!-- RESTANTE IGUAL AO SEU HTML ORIGINAL -->
+
+  <div class="fotoSobre">
+    <img src="./src/homemProgramando.png" alt="Um homem programando">
+  </div>
+
+  <div class="container-titulo-carrossel">
+    <div class="titulo-pet">
+      <h1>PET</h1>
+      <p><strong>P</strong>esquisa</p>
+      <p><strong>E</strong>xtensão</p>
+      <p><strong>T</strong>utoria</p>
+    </div>
+
+    <div class="container-carrossel">
+      <div class="carrossel">
+        <div class="slides">
+          <div class="slide ativo">
+            <p>A <strong>extensão</strong> no PET Ciência da Computação tem como propósito levar o conhecimento produzido na universidade para a sociedade...</p>
+          </div>
+          <div class="slide">
+            <p>No PET Ciência da Computação, a <strong>pesquisa</strong> é um dos pilares fundamentais para o desenvolvimento acadêmico...</p>
+          </div>
+          <div class="slide">
+            <p>A <strong>tutoria</strong> é essencial no PET Ciência da Computação, pois visa oferecer suporte acadêmico aos estudantes do curso...</p>
+          </div>
+        </div>
+
+        <div class="botoes">
+          <span class="botao ativo" onclick="mudarSlide(0)"></span>
+          <span class="botao" onclick="mudarSlide(1)"></span>
+          <span class="botao" onclick="mudarSlide(2)"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fundo-carrossel">
+    <div class="carrossel-imagens">
+      <button class="botao-esquerda" onclick="moverGaleria(-1)">&#8249;</button>
+      <div class="slides-galeria">
+        <img src="src/EncontroPetiano2025UFCcomp.jpg" alt="Foto 1">
+        <img src="src/EncontroPETsUECE2025.png" alt="Foto 2">
+        <img src="src/EncontroPETsUECE2025petianos.png" alt="Foto 3">
+        <img src="src/MesaRedonda.jpg" alt="Foto 4">
+        <img src="src/Secomp2025.jpg" alt="Foto 5">
+        <img src="src/VisitaTecnicaLanLink.jpg" alt="Foto 5">
+      </div>
+      <button class="botao-direita" onclick="moverGaleria(1)">&#8250;</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-info">
+      <div>
+        <img src="src/iconeEmail.svg" alt="Email" width="20" height="20">
+        <a href="mailto:pet.computacao@uece.br">pet.computacao@uece.br</a>
+      </div>
+      <div>
+        <img src="src/iconeInstagram.svg" alt="Instagram" width="20" height="20">
+        <a href="https://www.instagram.com/petcomputacao" target="_blank" rel="noopener noreferrer">@petcomputacao</a>
+      </div>
+      <div>
+        <img src="src/iconeLocal.svg" alt="Endereço" width="20" height="20">
+        <span>Avenida Dr. Silas Munguba, 1700 - Campus do Itaperi</span>
+      </div>
+    </div>
+
+    <div class="footer-logos">
+      <img src="src/petlogoFooter.png" alt="Logo PET Computação">
+      <img src="src/logoUeceFooter.png" alt="Logo UECE">
+    </div>
+  </footer>
+
+  <script src="sobre.js"></script>
+</body>
+</html>

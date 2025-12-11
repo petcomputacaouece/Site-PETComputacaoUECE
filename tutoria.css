@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --azul-principal: #00BFFF;
+  --gradiente-inicial: #020025;
+  --gradiente-final: #05090B;
+  --fundo-body-dark: linear-gradient(to right, #020025, #05090B);
+  --fundo-body-light: linear-gradient(to right, #0476A3, #020025);
+}
+
+body {
+  font-family: 'Inria Sans', sans-serif;
+  margin: 0;
+  background: var(--fundo-body-dark);
+  color: white;
+}
+
+body.modo-claro {
+  background: var(--fundo-body-light);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, var(--gradiente-inicial), var(--gradiente-final));
+  width: 100%;
+  padding: 1rem 4vw;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 6rem;
+  transition: background 0.5s;
+  font-family: 'Inria Sans', sans-serif;
+}
+
+body.modo-claro .header {
+  background: linear-gradient(to right, var(--gradiente-inicial), #0476A3);
+}
+
+.header img {
+  max-height: 5rem;
+}
+
+/* Navegação */
+.navigation_header {
+  display: flex;
+  gap: 5vw;
+}
+
+.navigation_header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.125rem;
+  letter-spacing: 0.125rem;
+  position: relative;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navigation_header a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  width: 0;
+  height: 0.125rem;
+  background: #0476A3;
+  transition: width 0.3s ease;
+}
+
+.navigation_header a:hover {
+  color: #0476A3;
+  transform: translateY(-0.2rem);
+}
+
+.navigation_header a:hover::after {
+  width: 100%;
+}
+
+/* Botão de modo claro/escuro */
+.toggle-botao {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 1.5rem;
+  position: relative;
+}
+
+.toggle-botao .icone {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 0.75rem;
+  transition: left 0.3s;
+}
+
+body.modo-claro .toggle-botao .icone {
+  left: 1.5rem;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/869/869869.png');
+  background-size: cover;
+}
+
+/* Título e descrição */
+.titulo {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
+  letter-spacing: 0.1em;
+}
+
+.descricao {
+  text-align: center;
+  margin-bottom: 6rem;
+  font-size: 1.2rem;
+}
+
+/* Tabela */
+.tabela-responsiva {
+  overflow-x: auto;
+  background-color: transparent;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: white;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #444;
+  color: white;
+}
+
+/* Modo escuro: paleta neutra com toque de cobalto */
+body:not(.modo-claro) th {
+  background-color: #1C1C2E; /* Cabeçalho: cinza profundo */
+}
+
+body:not(.modo-claro) td {
+  background-color: #2D2D3F; /* Corpo: cinza médio */
+}
+
+/* Modo claro (mantém atual) */
+body.modo-claro th {
+  background-color: #0476A3;
+}
+
+body.modo-claro td {
+  background-color: #020025;
+}
+
+tr:hover {
+  background-color: #1a1a1a;
+}
+
+/* Material / Cards */
+.material {
+  text-align: center;
+  margin: 4rem 0;
+}
+
+.material h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: white;
+  letter-spacing: 0.05em;
+}
+
+.grid-materiais {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 0 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.card-material1 {
+  background-color: white;
+  color: #020025;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+}
+
+.card-material h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.botao-material {
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  background-color: #007BFF;
+  color: white;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.botao-material:hover {
+  background-color: #0056b3;
+}
+
+/* Rodapé */
+.footer {
+  background: var(--gradiente-inicial);
+  text-decoration: none;
+  width: 100%;
+  color: white;
+  padding: 2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer .footer-info {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer .footer-info div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  word-break: break-word;
+}
+
+.footer .footer-info img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.footer .footer-logos {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer .footer-logos img {
+  height: 5rem;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #00BFFF;
+}

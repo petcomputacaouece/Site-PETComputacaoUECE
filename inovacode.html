@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="shortcut icon" href= "src/petlogoFooter.png" type="image/x-icon">
+  <title>Inovacode</title>
+  <link rel="stylesheet" href="inovacode.css" />
+</head>
+<body>
+
+   <header class="header">
+  <img src="./src/LogoPET.png" alt="Logo do PET">
+  
+  <nav class="navigation_header">
+    <a href="index.html">Sobre nós</a>
+    <a href="selecao.html">Seleção</a>
+    <a href="secomp.html">SECOMP</a>
+    <a href="atividades.html">Atividades</a>
+    <a href="membros.html">Membros</a>
+  </nav>
+
+  <button id="modo-toggle" class="toggle-botao">
+    <div class="icone"></div>
+  </button>
+</header>
+
+
+  <main class="conteudo-inovacode">
+    <h1 class="titulo-inovacode">Inovacode</h1>
+
+    <section class="cards-container">
+  <div class="card">
+    <img src="src/pessoaProgramando.jpg" alt="Curso 1">
+    <h2>Curso ainda a definir</h2>
+    <p class="data">-/-/- <br> Ainda a definir</p>
+    <p class="descricao">
+      Estamos escolhendo o tema do curso com carinho. Fique atento às próximas atualizações.
+    </p>
+    <button class="btn azul">INSCREVER-SE</button>
+  </div>
+
+  <div class="card encerrado">
+    <img src="src/cursoGIT.png" alt="Curso 2">
+    <h2>Curso de Git/Github</h2>
+    <p class="data">14/11/25 <br> 13:00 - 15:00</p>
+    <p class="descricao">
+      Aprenda sem medo a usar o Git e o GitHub, ferramentas essenciais para qualquer desenvolvedor
+      com uma abordagem prática e acessível.
+    </p>
+    <a href="#" class="btn-certificado">ACESSE SEU CERTIFICADO</a>
+  </div>
+
+  <div class="card encerrado">
+    <img src="src/cursoLLM.png" alt="Curso 3">
+    <h2>Curso de LLM</h2>
+    <p class="data">07/08/25 <br> 15:00 - 17:00</p>
+    <p class="descricao">
+      Aprenda a utilizar Inteligência Artificial: conheça ferramentas, descubra como aplicá-las e desenvolva prompts mais eficazes.
+    </p>
+
+    <a href="#" class="btn-certificado">ACESSE SEU CERTIFICADO</a>
+  </div>
+</section>
+  </main>
+
+  <footer class="footer">
+  <div class="footer-info">
+    <div>
+      <img src="src/iconeEmail.svg" alt="Email" width="20" height="20">
+      <a href="mailto:pet.computacao@uece.br">pet.computacao@uece.br</a>
+    </div>
+    <div>
+     <img src="src/iconeInstagram.svg" alt="Instagram" width="20" height="20">
+     <a href="https://www.instagram.com/petcomputacao" target="_blank" rel="noopener noreferrer">@petcomputacao</a>
+    </div>
+    <div>
+      <img src="src/iconeLocal.svg" alt="Endereço" width="20" height="20">
+      <span>Avenida Dr. Silas Munguba, 1700 - Campus do Itaperi</span>
+    </div>
+  </div>
+
+  <div class="footer-logos">
+    <img src="src/petlogoFooter.png" alt="Logo PET Computação">
+    <img src="src/logoUeceFooter.png" alt="Logo UECE">
+  </div>
+</footer>
+
+  <script>
+    const toggleButton = document.querySelector('.toggle-botao');
+    toggleButton.addEventListener('click', () => {
+      document.body.classList.toggle('modo-claro');
+    });
+  </script>
+
+</body>
+</html>

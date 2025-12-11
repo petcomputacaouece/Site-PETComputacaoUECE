@@ -1,0 +1,300 @@
+/* Fonte e variáveis base */
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap');
+
+:root {
+  --azul-principal: #00BFFF;
+  --gradiente-inicial: #020025;
+  --gradiente-final: #000000;
+  --fundo-body-dark: linear-gradient(to right, #000, #020025);
+  --fundo-body-light: linear-gradient(to right, #0476A3, #020025);
+  --texto-dark: #ffffff;
+  --texto-light: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Inria Sans', sans-serif;
+  background: var(--fundo-body-dark);
+  color: var(--texto-dark);
+  min-height: 100vh;
+  transition: background 0.5s, color 0.5s;
+}
+
+body.modo-claro {
+  background: var(--fundo-body-light);
+  color: var(--texto-dark);
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, var(--gradiente-inicial), var(--gradiente-final));
+  width: 100%;
+  padding: 1rem 4vw;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 6rem;
+  transition: background 0.5s;
+}
+
+.header img {
+  max-height: 5rem;
+}
+
+/* Navegação */
+.navigation_header {
+  display: flex;
+  gap: 5vw;
+}
+
+.navigation_header a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.125rem;
+  letter-spacing: 0.125rem;
+  position: relative;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navigation_header a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.3rem;
+  width: 0;
+  height: 0.125rem;
+  background: var(--azul-principal);
+  transition: width 0.3s ease;
+}
+
+.navigation_header a:hover {
+  color: var(--azul-principal);
+  transform: translateY(-0.2rem);
+}
+
+.navigation_header a:hover::after {
+  width: 100%;
+}
+
+/* Botão de modo claro/escuro */
+.toggle-botao {
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 2.5rem;
+  height: 1.5rem;
+  position: relative;
+}
+
+.toggle-botao .icone {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 0.75rem;
+  transition: left 0.3s;
+}
+
+body.modo-claro .toggle-botao .icone {
+  left: 1.5rem;
+  background-image: url('https://cdn-icons-png.flaticon.com/512/869/869869.png');
+  background-size: cover;
+}
+
+/* Banner de membros */
+.banner-membros {
+  background: url('src/FotoGeral2025.jpeg') center 58%/cover no-repeat;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner-membros h1 {
+  font-size: 2.5rem;
+  color: var(--branco);
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  margin: 2rem 0;
+}
+
+/* Grid de membros */
+.grid-membros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 6rem;
+  max-width: 90%;
+  margin: 4rem auto;
+  justify-items: center;
+  padding: 0 1rem;
+}
+
+.membro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  max-width: 150px;
+}
+
+.membro .foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+/* Depoimentos */
+.depoimentos {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+}
+
+.depoimentos h2 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+  color: var(--azul-principal);
+}
+
+.depoimentos .sub {
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+
+/* Footer */
+.footer {
+  background: var(--gradiente-inicial);
+  text-decoration: none;
+  width: 100%;
+  color: white;
+  padding: 2rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+  font-size: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer .footer-info {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer .footer-info div {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  word-break: break-word;
+}
+
+.footer .footer-info img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.footer .footer-logos {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer .footer-logos img {
+  height: 5rem;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: var(--azul-principal);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .navigation_header {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .grid-membros {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .banner-membros h1 {
+    font-size: 2rem;
+  }
+
+  .card-depoimento {
+    min-width: 200px;
+    padding: 1.5rem;
+  }
+}
+
+/* Grid de depoimentos */
+.grid-depoimentos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* Card de depoimento */
+.card-depoimento {
+  background: rgba(255,255,255,0.9);
+  color: #000;
+  border-radius: 1rem;
+  padding: 1.7rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 400px;
+
+}
+
+.card-depoimento .aspas {
+  font-size: 3.5rem;
+  color: var(--azul-principal);
+  margin-bottom: -1.5rem;
+  margin-top: -1rem;
+}
+
+.card-depoimento .texto {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.card-depoimento .autor {
+  font-size: 1rem;
+  font-style: italic;
+  margin-top: auto;
+}
+
