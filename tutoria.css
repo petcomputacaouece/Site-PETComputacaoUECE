@@ -19,6 +19,9 @@ body {
   margin: 0;
   background: var(--fundo-body-dark);
   color: white;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 body.modo-claro {
@@ -48,7 +51,6 @@ body.modo-claro .header {
   max-height: 5rem;
 }
 
-/* Navegação */
 .navigation_header {
   display: flex;
   gap: 5vw;
@@ -236,6 +238,7 @@ tr:hover {
   gap: 2rem;
   font-size: 1rem;
   flex-wrap: wrap;
+  margin-top: auto;
 }
 
 .footer .footer-info {
@@ -279,4 +282,93 @@ tr:hover {
 
 .footer a:hover {
   color: #00BFFF;
+}
+
+@media (max-width: 768px) {
+  .header {
+    gap: 1rem;
+    padding: 1rem 2rem 0 0;
+  }
+
+  .header img {
+    max-height: 4rem;
+  }
+
+  .navigation_header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .descricao{
+    padding: 0 1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .footer-logos {
+    justify-content: center;
+  }
+
+  .footer .footer-logos img {
+    height: 3rem;
+  }
+}
+
+@media (max-width: 630px) {
+  .tabela-responsiva {
+    padding: 0.5rem;
+    
+  }
+
+  table {
+    width: 95%;
+    min-width: 0;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .header img {
+    max-height: 3rem;
+  }
+
+  .navigation_header a {
+    font-size: 0.875rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .titulo {
+    font-size: 2.5rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .descricao {
+    font-size: 1rem;
+    margin-bottom: 4rem;
+  }
+
+  .material h2 {
+    font-size: 2rem;
+  }
+
+  .tabela-responsiva, table, thead, tbody {
+    width: 95%;
+    margin: auto;
+  }
+}
+
+@media (max-width: 376px) {
+  .navigation_header {
+    gap: 3vw;
+  }
+
+  .navigation_header a {
+    font-size: 0.75rem;
+    letter-spacing: 0.025rem;
+  }
 }
