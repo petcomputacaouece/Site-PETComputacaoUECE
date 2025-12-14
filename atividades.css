@@ -28,7 +28,8 @@
   z-index: 1000;
   height: 6rem;
   transition: background 0.5s;
-  font-family: 'Inria Sans', sans-serif; /* <-- linha adicionada */
+  font-family: 'Inria Sans', sans-serif;
+  /* <-- linha adicionada */
 }
 
 body.modo-claro .header {
@@ -268,7 +269,8 @@ body.modo-claro .toggle-botao .icone {
 }
 
 .footer a:hover {
-  color: #00BFFF; /* ou outra cor para hover */
+  color: #00BFFF;
+  /* ou outra cor para hover */
 }
 
 /* Responsividade */
@@ -299,5 +301,67 @@ body.modo-claro .toggle-botao .icone {
   .mensagem-atividade {
     font-size: 1rem;
     padding: 0.8rem 1.2rem;
+  }
+}
+
+
+/* REPONSIVIDADE */
+
+@media (max-width: 370px) {
+  .navigation_header {
+    gap: 3vw;
+  }
+
+  .navigation_header a {
+    font-size: 0.75rem;
+    letter-spacing: 0.025rem;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .header img {
+    max-height: 3rem;
+  }
+
+  .navigation_header a {
+    font-size: 0.875rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .footer {
+    display: grid;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header {
+    gap: 1rem;
+    padding: 1rem 2rem 1rem 0;
+  }
+
+  .header img {
+    max-height: 4rem;
+  }
+
+  .navigation_header {
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .footer-logos {
+    justify-content: center;
+  }
+
+  .footer .footer-logos img {
+    height: 3rem;
   }
 }

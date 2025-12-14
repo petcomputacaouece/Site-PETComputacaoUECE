@@ -123,7 +123,7 @@ body.modo-claro .toggle-botao .icone {
 .banner-membros h1 {
   font-size: 2.5rem;
   color: var(--branco);
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   margin: 2rem 0;
 }
 
@@ -159,7 +159,7 @@ body.modo-claro .toggle-botao .icone {
 .depoimentos {
   text-align: center;
   padding: 4rem 2rem;
-  background: radial-gradient(circle, rgba(255,255,255,0.1), transparent);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
 }
 
 .depoimentos h2 {
@@ -267,7 +267,7 @@ body.modo-claro .toggle-botao .icone {
 
 /* Card de depoimento */
 .card-depoimento {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   color: #000;
   border-radius: 1rem;
   padding: 1.7rem;
@@ -298,3 +298,67 @@ body.modo-claro .toggle-botao .icone {
   margin-top: auto;
 }
 
+
+/* REPONSIVIDADE */
+
+@media (max-width: 370px) {
+  .navigation_header {
+    gap: 3vw;
+  }
+
+  .navigation_header a {
+    font-size: 0.75rem;
+    letter-spacing: 0.025rem;
+  }
+
+  .card-depoimento {
+    width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header img {
+    max-height: 3rem;
+  }
+
+  .navigation_header a {
+    font-size: 0.875rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .footer {
+    display: grid;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header {
+    gap: 1rem;
+    padding: 1rem 2rem 1rem 0;
+  }
+
+  .header img {
+    max-height: 4rem;
+  }
+
+  .navigation_header {
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-direction: row;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .footer-logos {
+    justify-content: center;
+  }
+
+  .footer .footer-logos img {
+    height: 3rem;
+  }
+}

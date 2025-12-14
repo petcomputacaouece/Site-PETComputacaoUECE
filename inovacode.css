@@ -18,12 +18,13 @@
   font-family: 'Inria Sans', sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-    display: flex;
+  display: flex;
   flex-direction: column;
   background: var(--fundo-body-dark);
   color: var(--texto-claro);
@@ -333,4 +334,68 @@ body.modo-claro .titulo-inovacode {
 
 .footer a:hover {
   color: #00BFFF;
+}
+
+
+/* REPONSIVIDADE */
+
+@media (max-width: 370px) {
+  .navigation_header {
+    gap: 3vw;
+  }
+
+  .navigation_header a {
+    font-size: 0.75rem;
+    letter-spacing: 0.025rem;
+  }
+
+  .card {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header img {
+    max-height: 3rem;
+  }
+
+  .navigation_header a {
+    font-size: 0.875rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .footer {
+    display: grid;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .header {
+    gap: 1rem;
+    padding: 1rem 2rem 0 0;
+  }
+
+  .header img {
+    max-height: 4rem;
+  }
+
+  .navigation_header {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .footer-logos {
+    justify-content: center;
+  }
+
+  .footer .footer-logos img {
+    height: 3rem;
+  }
 }
