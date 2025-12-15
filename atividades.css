@@ -273,6 +273,11 @@ body.modo-claro .toggle-botao .icone {
   /* ou outra cor para hover */
 }
 
+.menu-toggle,
+.mobile-menu {
+  display: none;
+}
+
 /* Responsividade */
 @media (max-width: 768px) {
 

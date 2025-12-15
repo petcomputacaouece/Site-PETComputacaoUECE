@@ -4,24 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Membros</title>
-  <link rel="shortcut icon" href="src/petlogoFooter.png" type="image/x-icon">
+  <link rel="shortcut icon" href="src/logoPetNova.png" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Inria+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="membros.css">
 </head>
 <body>
   <!-- Header -->
   <header class="header">
-    <img src="src/LogoPET.png" alt="Logo do PET">
-    <nav class="navigation_header">
-      <a href="index.html">Sobre nós</a>
-      <a href="selecao.html">Seleção</a>
-      <a href="secomp.html">SECOMP</a>
-      <a href="atividades.html">Atividades</a>
-      <a href="membros.html" class="active">Membros</a>
-    </nav>
-    <button id="modo-toggle" class="toggle-botao">
-      <div class="icone"></div>
-    </button>
+    <img src="src/logoPetNova.png" alt="Logo do PET">
+    <!-- Menu Desktop -->
+  <nav class="navigation_header desktop-menu">
+    <a href="index.html">Sobre nós</a>
+    <a href="selecao.html">Seleção</a>
+    <a href="secomp.html">SECOMP</a>
+    <a href="atividades.html">Atividades</a>
+    <a href="membros.html">Membros</a>
+  </nav>
+
+  <!-- Botão Mobile -->
+  <button class="menu-toggle">☰</button>
+
+  <!-- Menu Mobile -->
+  <nav id="mobileMenu" class="mobile-menu">
+    <a href="index.html">Sobre nós</a>
+    <a href="selecao.html">Seleção</a>
+    <a href="secomp.html">SECOMP</a>
+    <a href="atividades.html">Atividades</a>
+    <a href="membros.html">Membros</a>
+  </nav>
+
+  <!-- Botão de modo claro/escuro -->
+  <button id="modo-toggle" class="toggle-botao">
+    <div class="icone"></div>
+  </button>
   </header>
 
   <!-- Banner -->
@@ -161,17 +176,12 @@
       </div>
     </div>
     <div class="footer-logos">
-      <img src="src/petlogoFooter.png" alt="Logo PET Computação">
+      <img src="src/logoPetNova.png" alt="Logo PET Computação">
       <img src="src/logoUeceFooter.png" alt="Logo UECE">     
     </div>
   </footer>
 
-  <script>
-    const botaoToggle = document.getElementById('modo-toggle');
-    botaoToggle.addEventListener('click', () => {
-      document.body.classList.toggle('modo-claro');
-    });
-  </script>
+  <script src="sobre.js"></script>
 
   <script>
   const depoimentos = document.querySelectorAll(".carrossel-depoimentos .depoimento");

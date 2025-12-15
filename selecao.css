@@ -307,6 +307,11 @@ a {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
+.menu-toggle,
+.mobile-menu {
+  display: none;
+}
+
 @media (max-width: 768px) {
 
   .menu-toggle {
