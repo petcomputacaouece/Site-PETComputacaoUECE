@@ -328,9 +328,6 @@ body.modo-claro .fundo-carrossel {
 
 /* Torna visível SOMENTE no mobile (máx 768px) */
 @media (max-width: 768px) {
-  .desktop-menu {
-    display: none;
-  }
 
   .menu-toggle {
     display: block;
@@ -339,19 +336,25 @@ body.modo-claro .fundo-carrossel {
     border: none;
     color: white;
     cursor: pointer;
+    /*margin-left: auto;*/
+    margin-left: 1rem;
+    margin-top: -0.3rem;
+  }
+
+  .toggle-botao {
+    margin-left: auto;
   }
 
   .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #000;
+    padding: 1.5rem 1rem;
     display: none;
     flex-direction: column;
-    background-color: #000;
-    padding: 1rem;
-    width: 100%;
-    position: absolute;
-    top: 6rem; /* abaixo do header */
-    left: 0;
-    z-index: 999;
-    gap: 1rem;
+    gap: 1.2rem;
     text-align: center;
   }
 
@@ -360,8 +363,106 @@ body.modo-claro .fundo-carrossel {
   }
 
   .mobile-menu a {
-    color: white;
     font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
     text-decoration: none;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    height: 4.5rem;
+    position: relative;
+  }
+
+  .header img {
+    max-height: 3rem;
+  }
+
+  .navigation_header.desktop-menu {
+    display: none !important;
+  }
+
+  .toggle-botao {
+    margin-left: auto;
+  }
+
+   .container-titulo-carrossel {
+    flex-direction: column;
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  .titulo-pet {
+    width: 100%;
+  }
+
+  .container-carrossel {
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .carrossel {
+    max-width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+    .carrossel p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+
+   .slides-galeria img {
+    width: 60vw;
+    height: 60vw;
+    max-width: none;
+    max-height: none;
+    margin: 0 1rem;
+  }
+
+  .botao-esquerda,
+  .botao-direita {
+    font-size: 1.8rem;
+  }
+
+   .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .footer-info {
+    align-items: center;
+  }
+
+  .footer .footer-info div {
+    justify-content: center;
+  }
+
+  .footer .footer-logos {
+    justify-content: center;
+  }
+
+  .titulo-pet h1 {
+    font-size: 3rem;
+  }
+
+  .titulo-pet p {
+    font-size: 1rem;
+  }
+
+  .header img {
+    order: 1;
+  }
+
+  .menu-toggle {
+    order: 2;
+  }
+
+  .toggle-botao {
+    order: 3;
   }
 }
