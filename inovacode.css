@@ -195,6 +195,7 @@ body.modo-claro .titulo-inovacode {
 .card .btn.azul {
   background-color: var(--azul-claro);
   color: white;
+  text-decoration: none;
 }
 
 .card .btn.cinza {
@@ -396,7 +397,7 @@ body.modo-claro .titulo-inovacode {
     top: 100%;
     left: 0;
     width: 100%;
-    background-color: #000;
+    background-color: #020025;
     padding: 1.5rem 1rem;
     display: none;
     flex-direction: column;
