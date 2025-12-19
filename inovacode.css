@@ -18,12 +18,13 @@
   font-family: 'Inria Sans', sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-    display: flex;
+  display: flex;
   flex-direction: column;
   background: var(--fundo-body-dark);
   color: var(--texto-claro);
@@ -62,7 +63,7 @@ body.modo-claro .header {
 }
 
 /* Navegação */
-.navigation_header {
+.navigation_header.desktop-menu {
   display: flex;
   gap: 5vw;
 }
@@ -194,6 +195,7 @@ body.modo-claro .titulo-inovacode {
 .card .btn.azul {
   background-color: var(--azul-claro);
   color: white;
+  text-decoration: none;
 }
 
 .card .btn.cinza {
@@ -333,4 +335,124 @@ body.modo-claro .titulo-inovacode {
 
 .footer a:hover {
   color: #00BFFF;
+}
+
+.menu-toggle,
+.mobile-menu {
+  display: none;
+}
+
+
+/* REPONSIVIDADE */
+
+@media (max-width: 370px) {
+  .navigation_header {
+    gap: 3vw;
+  }
+
+  .navigation_header a {
+    font-size: 0.75rem;
+    letter-spacing: 0.025rem;
+  }
+
+  .card {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header img {
+    max-height: 3rem;
+  }
+
+  .navigation_header a {
+    font-size: 0.875rem;
+    letter-spacing: 0.05rem;
+  }
+
+  .footer {
+    display: grid;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-top: -0.3rem;
+  }
+  
+  .toggle-botao {
+    margin-left: auto;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #020025;
+    padding: 1.5rem 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 1.2rem;
+    text-align: center;
+    z-index: 999;
+  }
+
+  .mobile-menu.show {
+    display: flex;
+  }
+
+  .mobile-menu a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+    height: 4.5rem;
+    position: relative;
+  }
+
+  .header img {
+    max-height: 3rem;
+  }
+
+  .navigation_header.desktop-menu {
+    display: none !important;
+  }
+
+  .toggle-botao {
+    margin-left: auto;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer .footer-info {
+    align-items: center;
+  }
+
+  .footer .footer-info div {
+    justify-content: center;
+  }
+
+  .footer .footer-logos {
+    justify-content: center;
+  }
 }
